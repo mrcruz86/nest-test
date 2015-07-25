@@ -13,5 +13,9 @@
     "firebase": "~2.2.7",
     "angular-cookies": "~1.4.3",
     "angularfire": "~1.1.2"
+  },
+  "devDependencies": {
+    "breakpoint-sass": "~2.6.1",
+    "susy": "~2.2.5"
   }
 }
