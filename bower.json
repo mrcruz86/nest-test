@@ -1,0 +1,17 @@
+{
+  "name": "nest-test",
+  "version": "1.0.0",
+  "homepage": "https://github.com/mrcruz86/nest-test",
+  "authors": [
+    "jason cruz <jason.cruz@xtv-inc.com>"
+  ],
+  "description": "Testing the Nest Thermostat",
+  "main": "server.js",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.4.3",
+    "firebase": "~2.2.7",
+    "angular-cookies": "~1.4.3",
+    "angularfire": "~1.1.2"
+  }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nest Test</title>
+</head>
+<body ng-app="nestTest">
+	<h1>Nest Test</h1>
+
+	<div ng-controller="thermCtrl">
+		<h2>Thermostat</h2>
+		<button id="reg-button" ng-click="regDevice()">Register Device</button>
+		<div id="therm">
+
+			<h2>{{ thermostat.name }}</h2>
+			<p>{{ thermostat.ambient_temperature_f }}&deg {{ thermostat.temperature_scale }}</p>
+			
+		</div>
+	</div>
+
+	<script src="/bower_components/angular/angular.js"></script>
+	<script src="/bower_components/angular-cookies/angular-cookies.js"></script>
+	<script src="/bower_components/firebase/firebase.js"></script>
+	<script src="/bower_components/angularfire/dist/angularfire.js"></script>
+
+	<script src="app.js"></script>
+</body>
+</html>
