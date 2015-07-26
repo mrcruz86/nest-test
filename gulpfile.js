@@ -48,13 +48,13 @@ function errorlog (err) {
 
 gulp.task('scripts', function () {
 	return gulp.src('client/js/**/*.js')
-		.pipe(sourcemaps.init())
-			.pipe(concat('temp.js'))
-			.pipe(uglify())
-			.on('error', errorlog)
-			.pipe(rename('app.min.js'))
-		.pipe(sourcemaps.write('../maps'))
-		.pipe(gulp.dest('client/js/'))
+		// .pipe(sourcemaps.init())
+		// 	.pipe(concat('temp.js'))
+		// 	.pipe(uglify())
+		// 	.on('error', errorlog)
+		// 	.pipe(rename('app.min.js'))
+		// .pipe(sourcemaps.write('../maps'))
+		// .pipe(gulp.dest('client/js/'))
 		.pipe(reload({stream : true}));
 });
 
@@ -111,7 +111,7 @@ gulp.task('build:nodemon', function (cb) {
 	var started = false;
 
 	env({
-	    file: "env.json"
+	    file: "build/env.json"
 	});
 	
 	return nodemon({

@@ -31,6 +31,18 @@ app.controller('thermCtrl', ['$scope', '$cookies', '$timeout', '$window', functi
 		window.location.replace('/auth/nest');
 	};
 
+	$scope.increaseTemp = function() {
+		var newTemp = $scope.thermostat.target_temperature_f + 1;
+		var path = 'devices/thermostats/' + $scope.thermostat.device_id + '/target_temperature_f';
+		baseUrl.child(path).set(newTemp);
+	};
+
+	$scope.decreaseTemp = function() {
+		var newTemp = $scope.thermostat.target_temperature_f - 1;
+		var path = 'devices/thermostats/' + $scope.thermostat.device_id + '/target_temperature_f';
+		baseUrl.child(path).set(newTemp);
+	};
+
 	baseUrl.on('value', function (snapshot) {
 		$timeout(function() {
 			$scope.data = snapshot.val();

@@ -12,7 +12,11 @@
 		<div id="therm">
 
 			<h2>Device Name: {{ thermostat.name }}</h2>
-			<p>{{ thermostat.ambient_temperature_f }}&deg {{ thermostat.temperature_scale }}</p>
+			<h2>Ambient Temp: {{ thermostat.ambient_temperature_f }}&deg {{ thermostat.temperature_scale }}</h2>
+
+			<h2>Target Temp: {{ thermostat.target_temperature_f }}&deg {{ thermostat.temperature_scale }}</h2>
+			<button ng-click="increaseTemp()">Up</button>
+			<button ng-click="decreaseTemp()">Down</button>
 			
 		</div>
 	</div>
